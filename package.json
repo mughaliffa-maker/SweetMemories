@@ -1,14 +1,9 @@
 {
-  "name": "sweet-crumbs-crumbcam",
+  "name": "crumbcam-static",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "vite --host 0.0.0.0",
-    "dev": "vite --host 0.0.0.0",
-    "build": "mkdir -p dist && cp -R index.html assets css js dist/",
-    "preview": "vite preview --host 0.0.0.0"
-  },
-  "devDependencies": {
-    "vite": "latest"
+    "build": "node build.js",
+    "start": "npx serve public"
   }
 }
