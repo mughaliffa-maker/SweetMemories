@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#9f141b" />
+  <title>The Sweet Crumbs | CrumbCam</title>
+  <link rel="icon" type="image/png" href="assets/cookie.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="background-decoration" aria-hidden="true">
+    <img src="assets/cookie.png" class="floating-cookie floating-cookie-top" alt="" />
+    <img src="assets/cookie.png" class="floating-cookie floating-cookie-bottom" alt="" />
+    <span class="grain grain-one"></span>
+    <span class="grain grain-two"></span>
+    <span class="grain grain-three"></span>
+  </div>
+
+  <main class="app-shell">
+    <section class="phone-frame" aria-label="The Sweet Crumbs CrumbCam app">
+      <section class="intro-screen" id="introScreen">
+        <header class="brand-header">
+          <span>The Sweet Crumbs Presents</span>
+          <h1>CrumbCam</h1>
+        </header>
+
+        <div class="hero-cookie-wrap" aria-hidden="true">
+          <img src="assets/cookie.png" class="hero-cookie" alt="" />
+          <span class="bite bite-one"></span>
+          <span class="bite bite-two"></span>
+          <span class="bite bite-three"></span>
+        </div>
+
+        <div class="intro-copy">
+          <p>Allow camera access to track your eyes and wear our cookie filter.</p>
+          <strong>#SweetMoments</strong>
+          <span>Snack. Scan. Share.</span>
+        </div>
+
+        <div class="start-area">
+          <button class="primary-button" id="startBtn" type="button">Start Camera</button>
+          <img src="assets/cookie.png" class="button-cookie button-cookie-left" alt="" />
+          <img src="assets/cookie.png" class="button-cookie button-cookie-right" alt="" />
+        </div>
+
+        <footer class="tagline">
+          <img src="assets/cookie.png" alt="" />
+          <span>Baked For Sweet Moments</span>
+        </footer>
+      </section>
+
+      <section class="camera-screen" id="cameraScreen" aria-label="Camera filter screen">
+        <header class="camera-header">
+          <div class="camera-title">
+            <span>The Sweet Crumbs</span>
+            <strong>CrumbCam</strong>
+          </div>
+          <button class="icon-button" id="stopBtn" type="button" aria-label="Close camera">×</button>
+        </header>
+
+        <section class="camera-card">
+          <video id="video" playsinline muted></video>
+          <canvas id="canvas"></canvas>
+          <div class="loading-layer" id="loadingLayer">
+            <img src="assets/cookie.png" alt="" />
+            <strong>Loading CrumbCam</strong>
+            <span>Please allow camera permission</span>
+          </div>
+          <p class="camera-status" id="statusText">Camera is not started</p>
+        </section>
+
+        <div class="controls-grid">
+          <button class="secondary-button red" id="snapBtn" type="button">Snap</button>
+          <button class="secondary-button cream" id="shareBtn" type="button">Share</button>
+          <button class="secondary-button dark full" id="downloadBtn" type="button">Download Snap</button>
+        </div>
+
+        <section class="share-note">
+          <strong>#SweetMoments</strong>
+          <p>Scan. Snap. Share your cookie look with friends.</p>
+        </section>
+
+        <img id="previewImage" class="preview-image" alt="Your CrumbCam photo" />
+      </section>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
